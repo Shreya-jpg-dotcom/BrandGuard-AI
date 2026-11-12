@@ -1,0 +1,3 @@
+import { ArrowUpRight, Construction } from 'lucide-react';
+import { Link } from 'react-router-dom';
+export default function ComingSoon({ title, description }) { return <div className="coming-soon"><span className="coming-icon"><Construction size={22}/></span><span className="eyebrow">NEXT IN THE BUILD</span><h1>{title}</h1><p>{description || 'This workspace is part of the BrandGuard roadmap and will be connected in a subsequent development part.'}</p><div className="coming-note"><span className="status-dot"/> Not available in Part 1 — no simulated actions</div><Link to="/workspace" className="text-link">Back to dashboard <ArrowUpRight size={15}/></Link></div>; }

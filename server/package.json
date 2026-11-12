@@ -1,0 +1,28 @@
+{
+  "name": "@brandguard/server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "provision-admin": "node scripts/provisionAdmin.js",
+    "check": "node --check server.js && node --check config/db.js && node --check controllers/authController.js && node --check middleware/auth.js && node --check routes/auth.js && node --check routes/admin.js && node --check routes/employee.js && node --check routes/documents.js && node --check routes/knowledge.js && node --check services/documentService.js && node --check services/knowledgeService.js && node --check services/organizationService.js && node --check services/activityService.js && node --check utils/errors.js && node --check routes/analyses.js && node --check engine/index.js && node --check engine/normalizer.js && node --check engine/rules/deterministicRules.js && node --check engine/services/retrievalService.js && node --check engine/services/aiReasoner.js && node --check engine/services/evidenceValidator.js && node --check engine/services/scoreCalculator.js && node --check models/Analysis.js && node --check routes/conversations.js && node --check routes/corrections.js && node --check routes/versions.js && node --check routes/reviews.js && node --check routes/insights.js && node --check services/governanceService.js && node --check models/Conversation.js && node --check models/CorrectionSuggestion.js && node --check models/Review.js && node --check models/AuditEvent.js && node --check services/textPatchService.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.0.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.1",
+    "cookie-parser": "^1.4.7",
+    "multer": "^2.0.2",
+    "mammoth": "^1.10.0",
+    "pdf-parse": "^1.1.1",
+    "cheerio": "^1.1.0"
+  }
+}

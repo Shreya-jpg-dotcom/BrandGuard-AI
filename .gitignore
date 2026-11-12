@@ -1,0 +1,11 @@
+node_modules/
+client/dist/
+server/.env
+.env
+*.log
+.DS_Store
+.vscode/
+coverage/
+
+server/private_uploads/
+private_uploads/
